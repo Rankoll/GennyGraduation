@@ -2,11 +2,12 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background-color: rgb(32, 30, 30);
 }
 
 header {
-    background: linear-gradient(to bottom, rgb(32, 30, 30), #71c1f7);
+    background: linear-gradient(to top, transparent, #71c1f7);
     color: #ffffff;
     text-align: center;
     padding: 1em;
@@ -17,7 +18,7 @@ header h1 i {
 }
 
 .box {
-    max-width: 600px;
+    max-width: 50rem;
     margin: auto;
     border: 1px solid white;
     border-radius: 8px;
@@ -25,15 +26,12 @@ header h1 i {
     margin-top: 4rem;
     transition: transform 0.3s ease-in-out;
     padding: 10px;
-
 }
 
-.box:hover{
+.box:hover {
     border: 1px solid #71c1f7;
     transition: .5s;
     transform: scale(1.05);
-
-
 }
 
 #h2Title {
@@ -47,7 +45,6 @@ header h1 i {
 .accordion {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
     margin: auto;
     padding: 1rem;
 }
@@ -67,11 +64,11 @@ header h1 i {
     text-align: left;
     border-radius: 3px;
     margin-bottom: 10px;
-
+    font-size: 1.3em;
 }
 
 
-.accordion-item-header:hover{
+.accordion-item-header:hover {
     background: linear-gradient(to bottom, rgb(163, 163, 163), #71c1f7);
 }
 
@@ -81,6 +78,8 @@ header h1 i {
     border: 2px solid orange;
     border-radius: 3px;
     line-height: 1.5;
+    text-align: justify;
+    font-size: 1.1em;
 }
 
 .arrow {
@@ -98,4 +97,18 @@ img {
     filter: invert(100%); /* Rende l'icona bianca */
     transform: scale(2); /* Aumenta la scala dell'icona (lo spessore) */
     margin-top: -15px;
+}
+
+canvas {
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+    .box {
+        max-width: 40rem;
+    }
 }
