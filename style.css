@@ -1,0 +1,101 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(32, 30, 30);
+}
+
+header {
+    background: linear-gradient(to bottom, rgb(32, 30, 30), #71c1f7);
+    color: #ffffff;
+    text-align: center;
+    padding: 1em;
+}
+
+header h1 i {
+    margin-left: 12px;
+}
+
+.box {
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 4rem;
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+
+}
+
+.box:hover{
+    border: 1px solid #71c1f7;
+    transition: .5s;
+    transform: scale(1.05);
+
+
+}
+
+#h2Title {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    top: 0.7rem;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.accordion-item {
+    border-radius: 4px;
+    margin-bottom: 8px;
+    color:#ffffff;
+}
+
+.accordion-item-header {
+    background-color: white;
+    color: hsl(0, 1%, 26%);
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 3px;
+    margin-bottom: 10px;
+
+}
+
+
+.accordion-item-header:hover{
+    background: linear-gradient(to bottom, rgb(163, 163, 163), #71c1f7);
+}
+
+.accordion-item-content {
+    display: none;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 3px;
+    line-height: 1.5;
+}
+
+.arrow {
+    float: right;
+    font-size: 0.8em;
+    transition: transform 0.5s ease-in-out;
+    margin-right: 20px;
+
+}
+
+img {
+    max-width: 30px;
+    vertical-align: middle;
+    margin-left: 17px;
+    filter: invert(100%); /* Rende l'icona bianca */
+    transform: scale(2); /* Aumenta la scala dell'icona (lo spessore) */
+    margin-top: -15px;
+}
