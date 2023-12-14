@@ -109,6 +109,20 @@ canvas {
 
 @media screen and (max-width: 1000px) {
     .box {
-        max-width: 40rem;
+        max-width: 42rem;
+    }
+
+    h2 {
+        font-size: 1.35em;
+    }
+
+    .accordion-item-content {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .box {
+        max-width: 32rem;
     }
 }

@@ -37,7 +37,7 @@ function toggleAccordion(header) {
 // Background stellato con numero di stelle modificabile tramite la variabile maxStars
 
 var w = canvas.width = 1920,
-    h = canvas.height = 1920,
+    h = canvas.height = window.innerHeight * 2,
     hue = 217,
     maxStars = 1800;
 
