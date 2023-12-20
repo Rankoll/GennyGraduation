@@ -11,6 +11,7 @@ header {
     color: #ffffff;
     text-align: center;
     padding: 1em;
+    min-width: 25rem;
 }
 
 header h1 i {
@@ -100,7 +101,6 @@ img {
 }
 
 canvas {
-    opacity: 0.5;
     position: absolute;
     top: 0;
     left: 0;
@@ -110,6 +110,10 @@ canvas {
 @media screen and (max-width: 1000px) {
     .box {
         max-width: 42rem;
+    }
+
+    h1 {
+        font-size: 1.85em;
     }
 
     h2 {
@@ -123,6 +127,14 @@ canvas {
 
 @media screen and (max-width: 850px) {
     .box {
-        max-width: 32rem;
+        min-width: 25rem;
+    }
+
+    h1 {
+        font-size: 1.70em;
+    }
+
+    h2 {
+        font-size: 1.25em;
     }
 }

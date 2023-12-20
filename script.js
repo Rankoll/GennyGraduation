@@ -36,7 +36,7 @@ function toggleAccordion(header) {
 // Thanks to wulv5
 // Background stellato con numero di stelle modificabile tramite la variabile maxStars
 
-var w = canvas.width = 1920,
+var w = canvas.width = window.innerWidth,
     h = canvas.height = window.innerHeight * 2,
     hue = 217,
     maxStars = 1800;
@@ -84,10 +84,10 @@ function fn() {
         this.orbitX = w / 2;
         this.orbitY = h / 2;
         this.timePassed = random(0, maxStars);
-        this.speed = random(this.orbitRadius) / 900000;
+        this.speed = random(this.orbitRadius) / 1000000;
         this.alpha = random(2, 10) / 10;
         count++;
-        stars[count] = this
+        stars[count] = this;
     };
     Star.prototype.draw = function () {
         var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX, y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY, twinkle = random(10);
@@ -103,10 +103,12 @@ function fn() {
     for (var i = 0; i < maxStars; i++) {
         new Star()
     }
+
     function animation() {
+        w = window.innerWidth;
+
         ctx.globalCompositeOperation = 'source-over';
         ctx.globalAlpha = 0.8;
-        ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 1)';
         ctx.fillRect(0, 0, w, h);
         ctx.globalCompositeOperation = 'lighter';
         for (var i = 1, l = stars.length; i < l; i++) {
@@ -114,6 +116,17 @@ function fn() {
         }
         window.requestAnimationFrame(animation);
     }
+
+    // Aggiornamento del Canvas
+    function initCanvas() {
+        canvas.width = window.outerWidth;
+    }
+
+
+    // Resize listener
+    window.addEventListener('resize', function (e) {
+        initCanvas();
+    });
 
     animation();
 }
